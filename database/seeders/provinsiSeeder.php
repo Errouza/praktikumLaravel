@@ -15,7 +15,7 @@ class provinsiSeeder extends Seeder
     public function run(): void
     {
         DB::table('provinsi')->insert([
-            'nama_provinsi'=> Str::random(10),
+            'nama_provinsi'=> "Maluku",
             'kode_daerah'=> (1),
         ]);
     }
