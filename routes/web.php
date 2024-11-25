@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\inventoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::resource('/inventory', \app\Http\Controllers\inventoryController::class);
+Route::resource('/logistik', inventoryController::class);

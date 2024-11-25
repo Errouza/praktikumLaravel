@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\logistik;
+use App\Models\Logistik;
 use Illuminate\Support\Facades\Storage;
 
 class inventoryController extends Controller
 {
     public function index(){ //read
 
-        $logistik = logistik::all();
+        $inventory = logistik::all();
 
-        return view('logistik.logistik', compact('logistik'));
+        return view('logistik.index', compact('inventory'));
     }
     
     public function create(){ //create
-        return view('logistik.addLogistik');
+        return view('logistik.create');
     }
 
     public function store(Request $request){ //store
